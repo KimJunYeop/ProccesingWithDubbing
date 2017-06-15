@@ -1,0 +1,52 @@
+<nav class="w3-sidebar w3-bar-block w3-white w3-card-2" style="width:250px; left : 0px; top : 0px;" id="mySidebar">
+
+  <a class="w3-bar-item w3-button w3-large" href="#"><img src="/images/p5js.svg" style="width:80%;"></a>
+  </br>
+
+  <div class="w3-bar">
+    <a href="/" class="w3-bar-item w3-button w3-green w3-hover-green">Home</a>
+
+    <button class="w3-button w3-block w3-left-align w3-blue w3-hover-blue" onclick="myDropFunc()">Dom <i class="fa fa-caret-down"></i> </button>
+    <div id="demoDrop" class="w3-bar-block w3-hide w3-white w3-card-4">
+      <a href="/dom" class="w3-bar-item w3-button w3-hover-blue w3-text-blue"><i class="fa fa-arrow-right"></i>&nbsp Beyond the canvas</a>
+      <a href="/dom_second" class="w3-bar-item w3-button w3-hover-blue w3-text-blue"><i class="fa fa-arrow-right"></i>&nbsp Mouse moved</a>
+    </div>
+
+    <button class="w3-button w3-block w3-left-align w3-red w3-hover-red" onclick="myAccFunc()">Play <i class="fa fa-caret-down"></i> </button>
+    <div id="demoAcc" class="w3-bar-block w3-hide w3-white w3-card-4">
+      <a href="/play" class="w3-bar-item w3-button w3-hover-red w3-text-red"><i class="fa fa-arrow-right"></i>&nbspCreate Animation</a>
+      <a href="/play_second" class="w3-bar-item w3-button w3-hover-red w3-text-red"><i class="fa fa-arrow-right"></i>&nbspMove animation</a>
+      <a href="/play_third" class="w3-bar-item w3-button w3-hover-red w3-text-red"><i class="fa fa-arrow-right"></i>&nbspApplication animation</a>
+      <a href="/play_fourth" class="w3-bar-item w3-button w3-hover-red w3-text-red"><i class="fa fa-arrow-right"></i>&nbspPlay the Game!</a>
+      <a href="/play_5th" class="w3-bar-item w3-button w3-hover-red w3-text-red"><i class="fa fa-arrow-right"></i>&nbsp응용</a>
+    </div>
+
+
+
+  </div>
+</nav>
+<script>
+function myAccFunc() {
+    var x = document.getElementById("demoAcc");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+        x.previousElementSibling.className += " w3-green";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+        x.previousElementSibling.className =
+        x.previousElementSibling.className.replace(" w3-green", "");
+    }
+}
+
+function myDropFunc() {
+    var x = document.getElementById("demoDrop");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+        x.previousElementSibling.className += " w3-blue";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+        x.previousElementSibling.className =
+        x.previousElementSibling.className.replace(" w3-blue", "");
+    }
+}
+</script>
